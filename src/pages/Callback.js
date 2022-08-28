@@ -8,6 +8,7 @@ const Callback = () => {
   useEffect(() => {
     const { data: authListener  } = supabase.auth.onAuthStateChange((e, session) => {
       if (session.user) {
+        // TODO: user store에 dispatch
         navigate('/');
       }
     });
@@ -17,11 +18,7 @@ const Callback = () => {
     }
   }, []);
 
-  return (
-    <div>
-      잠시만 기다려주세요..
-    </div>
-  );
+  return null;;
 };
 
 export default Callback;

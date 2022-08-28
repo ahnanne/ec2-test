@@ -2,6 +2,7 @@ import { supabase } from "../utils/SupabaseClient";
 
 const useUser = () => {
   const getUser = () => {
+    // TODO: user store 값으로 변경
     const user = supabase.auth.user();
   
     if (!user) {
